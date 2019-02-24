@@ -59,6 +59,50 @@
   }
 }
 
+// Threads input box
+.p-threads_footer__input_container {
+  .p-threads_footer__input {
+    .p-message_input_field {
+      background: padding-box $color-shade-light;
+      border-color: $color-shade-mid;
+      border-left: 0;
+      color: $base-font-color;
+
+      &.focus ~ .p-message_input_file_button {
+        color: $base-font-color;
+      }
+    }
+  }
+}
+
+#msg_form {
+  &.focus {
+    #msg_input,
+    #primary_file_button:not(:hover):not(.active) {
+      border-color: $color-shade-dark;
+    }
+  }
+
+  #msg_input {
+    background: padding-box $color-shade-light;
+    border-color: $color-shade-mid;
+    border-left: 0;
+    color: $base-font-color;
+
+    &.focus ~ .msg_mentions_button:not(.hover) {
+      color: $base-font-color;
+    }
+  }
+
+  .msg_mentions_button {
+    color: $color-highlight;
+
+    &:hover {
+      color: $base-font-color;
+    }
+  }
+}
+
 #msg_input {
   @include placeholder;
 
